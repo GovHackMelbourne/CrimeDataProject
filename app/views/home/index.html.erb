@@ -1,1 +1,36 @@
 <h1>Hello :D</h1>
+
+<p id="city"></p>
+<p id="region-code"></p>
+<p id="region-name"></p>
+<p id="areacode"></p>
+<p id="ip"></p>
+<p id="zipcode"></p>
+<p id="longitude"></p>
+<p id="latitude"></p>
+<p id="country-name"></p>
+<p id="country-code"></p>
+
+<script>
+	// <![CDATA[
+	jQuery.ajax({
+	  url: '//freegeoip.net/json/',
+	  type: 'POST',
+	  dataType: 'jsonp',
+	  success: function (location) {
+	  jQuery('#city').html(location.city);
+	  jQuery('#region-code').html(location.region_code);
+	  jQuery('#region-name').html(location.region_name);
+	  jQuery('#areacode').html(location.areacode);
+	  jQuery('#ip').html(location.ip);
+	  jQuery('#zipcode').html(location.zip_code);
+	  jQuery('#longitude').html(location.longitude);
+	  jQuery('#latitude').html(location.latitude);
+	  jQuery('#country-name').html(location.country_name);
+	  jQuery('#country-code').html(location.country_code);
+	  console.log(location);
+	  }
+	});
+	// ]]>
+
+</script>
