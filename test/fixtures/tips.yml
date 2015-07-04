@@ -2,8 +2,4 @@
 
 one:
   tip: MyString
-  crime_datum_id: 1
-
-two:
-  tip: MyString
-  crime_datum_id: 1
+  crime_datum_id: 
