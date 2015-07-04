@@ -1,4 +1,9 @@
 #Crime Data Project
+The project aims to create a web app that will promote public awareness of crime data. This is to attempt to change people's behaviour through education and highlighting common misconceptions. 
+
+The web app is broken up into two main components:
+1. A quiz
+2. A right now function for quick easy access to relevant, summarised crime data pertaining to the users location at the time when accessing the web app. 
 
 ###CSV data files
 These files are stored into the project root directory and contain the following data:
