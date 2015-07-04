@@ -4,8 +4,8 @@ require 'csv'
 namespace :import do
 
 	desc "import crime_stats_now from csv"
-	task nowdata: :environment do
-		filename = File.join Rails.root, "NOWdata.csv"
+	task now_data: :environment do
+		filename = File.join Rails.root, "now_data.csv"
 		counter = 0
 
 		CSV.foreach(filename, :headers => true, :col_sep => "|") do |row| 
@@ -17,8 +17,8 @@ namespace :import do
 	end
 
 	desc "import questions_data from csv"
-	task questiondata: :environment do
-		filename = File.join Rails.root, "QUESTIONSdata.csv"
+	task question_data: :environment do
+		filename = File.join Rails.root, "questions_data.csv"
 		counter = 0
 
 		CSV.foreach(filename, :headers => true, :col_sep => "|") do |row| 
