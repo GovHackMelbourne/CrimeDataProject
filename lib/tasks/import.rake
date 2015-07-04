@@ -9,7 +9,7 @@ namespace :import do
 		counter = 0
 
 		CSV.foreach(filename, :headers => true, :col_sep => "|") do |row| 
-			crime_datum = CrimeDatum.create(category: row["Category"], local_authority: row["LocalAuthority"], time: row["Time"], season: row["Season"], light: row["Light"])
+			crime_datum = CrimeDatum.create(category: row["Category"], local_authority: row["LocalAuthority"], time: row["Time"], season: row["Season"], light: row["Light"], tip1: row["Tip1"], tip2: row["Tip2"], tip3: row["Tip3"], tip4: row["Tip4"])
 			puts "#{id} - #{crime_datum.errors.full_messages.join(",")}" if crime_datum.errors.any?
 			counter += 1 if crime_datum.persisted?
 		end
