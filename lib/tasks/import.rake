@@ -29,7 +29,7 @@ namespace :import do
 		puts "Imported #{counter}"
 	end
 
-	desc "import questions_data from csv"
+	desc "import postcode_lga_lookup data from csv"
 	task postcode_lga_lookup: :environment do
 		filename = File.join Rails.root, "postcode_lga_lookup.csv"
 		counter = 0
@@ -38,6 +38,19 @@ namespace :import do
 			lookup = PostcodeLgaLookup.create(postcode: row["Postcode"], lga: row["LGA"])
 			puts "#{id} - #{lookup.errors.full_messages.join(",")}" if lookup.errors.any?
 			counter += 1 if lookup.persisted?
+		end
+		puts "Imported #{counter}"
+	end
+
+	desc "import police_map_data from csv"
+	task police_map_data: :environment do
+		filename = File.join Rails.root, "police_map_data.csv"
+		counter = 0
+
+		CSV.foreach(filename, :headers => true, :col_sep => "|") do |row| 
+			police_map_datum = PoliceMapDatum.create(category: row["Category"], name: row["Name"], latitude: row["Latitude"], longitude: row["Longitude"], address: row["Address"], phone: row["Phone"])
+			puts "#{id} - #{police_map_datum.errors.full_messages.join(",")}" if police_map_datum.errors.any?
+			counter += 1 if police_map_datum.persisted?
 		end
 		puts "Imported #{counter}"
 	end
