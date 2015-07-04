@@ -28,4 +28,17 @@ namespace :import do
 		end
 		puts "Imported #{counter}"
 	end
+
+	desc "import questions_data from csv"
+	task postcode_lga_lookup: :environment do
+		filename = File.join Rails.root, "postcode_lga_lookup.csv"
+		counter = 0
+
+		CSV.foreach(filename, :headers => true, :col_sep => "|") do |row| 
+			lookup = PostcodeLgaLookup.create(postcode: row["Postcode"], lga: row["LGA"])
+			puts "#{id} - #{lookup.errors.full_messages.join(",")}" if lookup.errors.any?
+			counter += 1 if lookup.persisted?
+		end
+		puts "Imported #{counter}"
+	end
 end
