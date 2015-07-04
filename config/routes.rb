@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :home, only: [:index, :show]
-  resources :crime_data, only: [:show]
-  resources :quiz, only: [:index]
+  resources :crime_data, only: [:index, :show]
+  resources :quizzes, only: [:index, :show]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
