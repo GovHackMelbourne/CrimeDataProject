@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crime Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script scr="./script.js"></script>
+  </head>
+  <body>
+  <div class="background">
+  	<h1 class="wrong">
+       That's not quite right. Here, have some data...
+    </h1>
+    <br>
+    <p class="tip">
+      The car model that gets stolen most frequently is a Maserati
+    </p>
+    <br>
+    <div id="container" class="container" style=" max-width: 250px; height: 200; margin: 0 auto"></div>
+    <p>
+    	<button type="button" class="btn btn-warning btn-circle btn-xl small"><i class="fa fa-arrow-right"></i>
+		</button>
+	</p>
+</div>
+
+  <script type="text/javascript">
+
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Car theft by model'
+        },
+        subtitle: {
+            text: 'Source: <a href="...">crime stats</a>'
+        },
+        xAxis: {
+            categories: ['Mercedes', 'Holden', 'Maserati', 'BMW', 'Citroen'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Thefts/day',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+            credits: {
+            enabled: false
+        },
+        series: [{
+            data: [107, 31, 635, 203, 2]
+        }]
+    });
+});
+
+  </script>
+
+  </body>
+
+</html>
