@@ -19,5 +19,5 @@ New data can be bulk uploaded into the postgres database by running the followin
 
 1. bundle exec rake import:now_data
 2. bundle exec rake import:question_data
-3. bundle exec rake import:postcode_lga_data
+3. bundle exec rake import:postcode_lga_lookup
 4. bundle exec rake import:police_map_data
