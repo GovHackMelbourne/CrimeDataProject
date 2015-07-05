@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+body {
+  font-family: 'Lato'; 
+	background-color: #404040;
+	color: #F7F3E9;
+	font-size: 1.4em;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/*green: #5cb85c, yellow: #f0ad4e, blue: #, red: #d9534f*/
+
+.safe { 
+  color: #5cb85c;
+  }
+
+.wrong { 
+  color: #d9534f;
+  }
+
+.background {
+  width: 320px;
+  margin:0 auto;
+  padding: 30px;
+  text-align: center;	
+  background-color: #404040;
+  position: relative;
+}
+
+
+.btn-circle.btn-xl {
+  padding: 70px 70;
+  line-height: 1.33;
+  margin: 12px;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0;
+  text-align: center;
+  line-height: 1.428571429;
+}
+
+.standard{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  font-size: 40px;
+}
+
+.small{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+}
+
+.question{
+  width: 240px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 20px;
+
+}
+
+.rating{
+  width: 200px;
+  height: 130px;
+  border-radius: 200px;
+  font-size: 20px;
+}
+
+.start{
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  font-size: 40px;
+}
+
+
+.quiz{
+  width: 150px;
+  height: 100px;
+  border-radius: 200px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.data{
+  width: 120px;
+  height: 80px;
+  border-radius: 200px;
+  font-size: 18px;
+}
+
+.location{
+  width: 250px;
+  height: 40px;
+  border-radius: 200px;
+  font-size: 18px;
+}
+
+.tip{
+  font-size: 20px;
+}
+
+.score{
+  font-size: 30px;
+  color: #5cb85c;
+}
+
+.textquestion{
+  font-size: 20px;
+}
+
+.twitter{
+  background-color: #4099FF;
+}
+.facebook{
+  background-color: #3b5998;
+}
+
+.info{
+  position: absolute;
+  top:20px;
+  left:40px;
+}
+
+.zoom{
+  position: absolute;
+  left: 38px;
+  top: 54px;
+}
+
+.clock {
+  color:#404040;
+  width: 50px;
+  text-align: center;
+}
