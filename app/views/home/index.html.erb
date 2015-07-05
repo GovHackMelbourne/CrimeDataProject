@@ -7,7 +7,7 @@
 
    <p>
    	<% if cookies[:postcode].empty? || cookies[:postcode].nil? %>
-			<%= button_to "Set location and time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl start" %>
+			<%= button_to "START", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl start" %>
 			<% else %>
 			<%= button_to "START", home_paths_path, method: :get, class: "btn btn-success btn-circle btn-xl start" %>
 			Location detected as <%= cookies[:postcode] %>
