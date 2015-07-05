@@ -1,21 +1,20 @@
 <div class="background">
-  <i class="fa fa-info-circle info"></i>
-  <h1>
-    Criminal Investigation
-  </h1>
+<!--   <i class="fa fa-info-circle info"></i>
+ -->
+
+<%= image_tag('logo.png', class:"logo")%>
+
 
    <p>
    	<% if cookies[:postcode].empty? || cookies[:postcode].nil? %>
-			Please set location and time
+			<%= button_to "Set location and time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl start" %>
 			<% else %>
-			Location detected as <%= cookies[:postcode] %>
 			<%= button_to "START", home_paths_path, method: :get, class: "btn btn-success btn-circle btn-xl start" %>
+			Location detected as <%= cookies[:postcode] %>
+  			<%= button_to "change location & time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl location" %>
 		<% end %>
    </p>
-
-  <p>
-  <%= button_to "Set location and time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl location" %>
-   </p>  
+ 
 </div>
 
 <script>
