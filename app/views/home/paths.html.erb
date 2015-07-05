@@ -1,24 +1,23 @@
 <div class="background">
 	<p>
-		<a href="/crime_data">
+	<%= link_to(crime_data_path(:selection => 'Foot')) do %>
 			<button type="button" class="btn btn-warning btn-circle btn-xl standard">
 				<i class="fa fa-user"></i>
 			</button>
-		</a>
+	<% end %>
 	</p>
 	<p>
-		<a href="/crime_data">
+		<%= link_to(crime_data_path(:selection => 'Home')) do %>
 			<button type="button" class="btn btn-warning btn-circle btn-xl standard">
 				<i class="fa fa-building"></i>
 		    </button>
-		</a>
-	</p>
+		<% end %>
 	<p>
-		<a href="/crime_data">
+		<%= link_to(crime_data_path(:selection => 'Vehicle')) do %>
 			<button type="button" class="btn btn-warning btn-circle btn-xl standard">
 				<i class="fa fa-road"></i>
 		    </button>
-		</a>
+		<% end %>
 	</p>
 </div>
   
