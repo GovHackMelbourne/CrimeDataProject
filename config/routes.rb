@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
   root 'home#index'
+  get 'home/options'
+  get 'home/paths'
+  get 'crime_data/data'
 
   resources :home, only: [:index, :show]
   resources :crime_data, only: [:index, :show]

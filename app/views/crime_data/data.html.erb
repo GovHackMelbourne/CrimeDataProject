@@ -1,0 +1,60 @@
+<div class="background">
+  <p class="tip">
+  	Choose the location you are interested in! 
+  </p>
+
+	<div id='map'></div>
+
+  <p class="tip" style="margin-top:70px;" >
+    Choose a time of the day!
+  </p>
+
+  <div>
+    <input id="input-a" value="20:00" data-default="20:00" class="clock">
+  </div>
+
+  <p class="tip" style="margin-top:20px;">
+    Choose a data set!
+  </p>
+
+  <div class="dropdown" >
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Dataset
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Burglary</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Theft</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Physical assault</a></li>
+    </ul>
+  </div>
+
+  <button type="button" style="margin-top:70px;" class="btn btn-success btn-circle btn-xl small"><i class="fa fa-arrow-right"></i>
+	</button>
+</div>
+
+
+<script>
+
+var input = $('#input-a');
+input.clockpicker({
+    autoclose: true
+});
+
+
+function clickGrid(e) {
+console.log(e);
+}
+
+
+
+$.getJSON('http://guru.cycletour.org:5044/lga.json', {}, function(tilejson) {
+  //delete tilejson.bounds;
+
+  map = L.mapbox.map ('map', tilejson, {
+  });
+  map.setZoom(8);
+  map.gridLayer.on('click', clickGrid);
+
+});
+
+</script>
