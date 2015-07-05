@@ -42,7 +42,14 @@ input.clockpicker({
 
 
 function clickGrid(e) {
-console.log(e);
+  console.log(e);
+  lga_raw = e['data']['LGA_NAME11'];
+  lga_array = lga_raw.split('');
+  lga_array.splice(lga_raw.indexOf('('),10);
+  lga_name = lga_array.join('').trim();
+  eraseCookie('location');
+  createCookie('location',lga_name);
+  console.log(readCookie('location'));
 }
 
 
