@@ -5,8 +5,8 @@
   </h1>
 
    <p>
-   	<% if cookies[:postcode].empty? %>
-			Location not found, please enter it below
+   	<% if cookies[:postcode].empty? || cookies[:postcode].nil? %>
+			Please set location and time
 			<% else %>
 			Location detected as <%= cookies[:postcode] %>
 			<%= button_to "START", home_paths_path, method: :get, class: "btn btn-success btn-circle btn-xl start" %>
@@ -14,7 +14,7 @@
    </p>
 
   <p>
-  <%= button_to "change location and time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl location" %>
+  <%= button_to "Set location and time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl location" %>
    </p>  
 </div>
 
