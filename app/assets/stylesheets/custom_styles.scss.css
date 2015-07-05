@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 body {
   font-family: 'Lato'; 
-	background-color: white;
+	background-color: #404040;
 	color: #F7F3E9;
 	font-size: 1.4em;
 }
@@ -19,6 +19,15 @@ h1 {
 .wrong { 
   color: #d9534f;
   }
+
+.right { 
+  color: #5cb85c;
+  }
+
+.responses
+{
+  padding-left: 0px ;
+}
 
 .background {
   width: 320px;
@@ -85,6 +94,14 @@ h1 {
   height: 100px;
   border-radius: 200px;
   font-size: 20px;
+  line-height: 1;
+}
+
+.check{
+  width: 150px;
+  height: 30px;
+  border-radius: 200px;
+  font-size: 15px;
   line-height: 1;
 }
 
