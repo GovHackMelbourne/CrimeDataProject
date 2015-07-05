@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    </head>
+
+    <body>
+
+    <div id="container" class="container" style=" max-width: 250px; height: 300px; margin: 0 auto"></div>
+
+  <script type="text/javascript">
+
+$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Burglaries over the time of the day',
+            x: -20 //center
+        },        
+        subtitle: {
+            text: 'Source: <a href="...">crime stats</a>'
+        },
+        xAxis: {
+            categories: ['12am-6am', '6am-12pm', '12pm-6pm', '6pm-12pm']
+        },
+        yAxis: {
+            title: {
+                text: '% of burglaries'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+
+        series: [{
+            name: 'Burlaries',
+            data: [10.6, 34.0, 33.8, 21.4]
+        }]
+    });
+});
+
+  </script>
+
+</body>
+</html>
