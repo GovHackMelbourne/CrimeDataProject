@@ -335,6 +335,8 @@
                 }
 
                 if (nextQuestion.length) {
+                    // hide infor chart
+                    $('.infoChart').fadeOut(300);
                     currentQuestion.fadeOut(300, function(){
                         nextQuestion.find(_prevQuestionBtn).show().end().fadeIn(500);
                     });
