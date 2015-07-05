@@ -34,6 +34,8 @@
 	  jQuery('#country-name').html(location.country_name);
 	  jQuery('#country-code').html(location.country_code);
 	  console.log(location);
+	  eraseCookie('postcode');
+	  createCookie('postcode',location.zip_code);
 	  }
 	});
 	// ]]>
