@@ -3,22 +3,18 @@
   <h1>
     Criminal Investigation
   </h1>
-	<p>
-		<button type="button" class="btn btn-success btn-circle btn-xl start">START
-    </button>
-  </p>
 
    <p>
    	<% if cookies[:postcode].empty? %>
-			Cannot determine location, please enter it
+			Location not found, please enter it below
 			<% else %>
 			Location detected as <%= cookies[:postcode] %>
+			<%= button_to "START", home_paths_path, method: :get, class: "btn btn-success btn-circle btn-xl start" %>
 		<% end %>
    </p>
 
   <p>
-  	<button type="button" class="btn btn-primary btn-circle btn-xl location">change location and time
-    </button>
+  <%= button_to "change location and time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl location" %>
    </p>  
 </div>
 
