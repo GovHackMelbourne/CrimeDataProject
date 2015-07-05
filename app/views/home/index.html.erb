@@ -4,15 +4,14 @@
 
 <%= image_tag('logo.png', class:"logo")%>
 
-
    <p>
-   	<% if cookies.exists? %>
+   	<% if cookies[:postcode] && !cookies[:postcode].empty? %>
 			<%= button_to "START", home_paths_path, method: :get, class: "btn btn-success btn-circle btn-xl start" %>
 			Location detected as <%= cookies[:postcode] %>
   			<%= button_to "change location & time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl location" %>
 			<% else %>
 			<%= button_to "START", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl start" %>
-		<% end %>
+	<% end %>
    </p>
  
 </div>
