@@ -12,10 +12,6 @@ h1 {
 
 /*green: #5cb85c, yellow: #f0ad4e, blue: #, red: #d9534f*/
 
-.logo{
-  width:180px;
-}
-
 .safe { 
   color: #5cb85c;
   }
@@ -23,15 +19,6 @@ h1 {
 .wrong { 
   color: #d9534f;
   }
-
-.right { 
-  color: #5cb85c;
-  }
-
-.responses
-{
-  padding-left: 0px ;
-}
 
 .background {
   width: 320px;
@@ -101,14 +88,6 @@ h1 {
   line-height: 1;
 }
 
-.check{
-  width: 150px;
-  height: 30px;
-  border-radius: 200px;
-  font-size: 15px;
-  line-height: 1;
-}
-
 .data{
   width: 120px;
   height: 80px;
@@ -117,7 +96,7 @@ h1 {
 }
 
 .location{
-  width: 220px;
+  width: 250px;
   height: 40px;
   border-radius: 200px;
   font-size: 18px;
@@ -154,8 +133,6 @@ h1 {
   left: 38px;
   top: 54px;
 }
-
-
 
 .clock {
   color:#404040;
