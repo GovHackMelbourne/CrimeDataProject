@@ -10,5 +10,9 @@ class CrimeDataController < ApplicationController
   def show
     
   end
+
+  def data
+  	
+  end
   
 end
