@@ -10,10 +10,16 @@ class CrimeDataController < ApplicationController
     hour = time.hour
     month = time.month
 
-    # lga = PostcodeLgaLookup.where(postcode: cookies[:postcode]).first["lga"]
-    risk = CrimeDatum.where(category: cookies[:path], local_authority: cookies[:location], season: season_helper(month), time: time_helper(hour)).first
+    if cookies[:postcode] && !cookies[:postcode].empty?
+      lga = PostcodeLgaLookup.where(postcode: cookies[:postcode]).first["lga"]
+    end
 
-    case risk.light
+    local_authority = lga || cookies[:location]
+
+    record = CrimeDatum.where(category: cookies[:path], local_authority: local_authority, season: season_helper(month), time: time_helper(hour)).first
+    risk = record.light
+
+    case risk
     when "Red"
       @colour = "danger"
     when "Amber"
