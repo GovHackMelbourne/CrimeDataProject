@@ -1,0 +1,6 @@
+---
+postcode: !ruby/object:Construct
+  data:
+    :3000: Melbourne
+    :3001: postcode_converter
+  schema: {}

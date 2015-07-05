@@ -1,0 +1,49 @@
+<div class="background">
+  	   <p class="tip">
+	Going somewhere and want to get some information first?
+	<br>
+	Choose the location you are interested in! 
+    </p>
+
+	<div id='map'></div>
+
+    <p class="tip" style="margin-top:70px;" >
+    For what time would you like your data? 
+    </p>
+
+
+  <div>
+  <input id="input-a" value="20:00" data-default="20:00" class="clock">
+  </div>
+
+  <button type="button" style="margin-top:70px;" class="btn btn-warning btn-circle btn-xl small"><i class="fa fa-arrow-right"></i>
+	</button>
+
+
+  </div>
+
+
+<script>
+
+var input = $('#input-a');
+input.clockpicker({
+    autoclose: true
+});
+
+
+function clickGrid(e) {
+console.log(e);
+}
+
+
+
+$.getJSON('http://guru.cycletour.org:5044/lga.json', {}, function(tilejson) {
+  //delete tilejson.bounds;
+
+  map = L.mapbox.map ('map', tilejson, {
+  });
+  map.setZoom(8);
+  map.gridLayer.on('click', clickGrid);
+});
+
+</script>

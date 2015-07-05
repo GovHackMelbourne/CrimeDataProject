@@ -45,3 +45,6 @@ end
 
 gem "rails_config"
 
+gem 'construct', '~> 0.1.7'
+
+gem 'jquery-turbolinks'
