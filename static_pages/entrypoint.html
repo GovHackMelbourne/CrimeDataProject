@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    </head>
+
+    <body>
+
+    <div id="container" class="container" style=" max-width: 250px; height: 300px; margin: 0 auto"></div>
+
+  <script type="text/javascript">
+
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Burglary entry points'
+        },
+        subtitle: {
+            text: 'Source: <a href="...">crime stats</a>'
+        },
+        xAxis: {
+            categories: ['Front of house', 'Back of house', 'Side of house', 'Chimney'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Entry points in %',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+            credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Entry point',
+            data: [20.0, 24.4, 1, 0]
+        }]
+    });
+});
+
+
+  </script>
+
+</body>
+</html>
