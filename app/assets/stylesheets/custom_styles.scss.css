@@ -12,6 +12,10 @@ h1 {
 
 /*green: #5cb85c, yellow: #f0ad4e, blue: #, red: #d9534f*/
 
+.logo{
+  width:180px;
+}
+
 .safe { 
   color: #5cb85c;
   }
