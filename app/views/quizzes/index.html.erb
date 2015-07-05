@@ -16,13 +16,21 @@
       <h3 class="quizLevel"><strong>Ranking:</strong> <span></span></h3>
       <div class="quizResultsCopy"></div>
   </div>
+
+
 </div>
+
+
 
 <script>
 
   // Setup your quiz text and questions here
 
 // NOTE: pay attention to commas, IE struggles with those bad boys
+
+var test = '<%= @testing.first.question %>';
+console.log('hi');
+console.log(test);
 
 var quizJSON = {
     "info": {
@@ -100,4 +108,7 @@ var quizJSON = {
     $('#slickQuiz').slickQuiz();
   });
 
+
+
+  
 </script>
