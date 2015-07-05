@@ -8,7 +8,14 @@
     </button>
   </p>
 
-   You are in Ballarat
+   <p>
+   	<% if cookies[:postcode].empty? %>
+			Cannot determine location, please enter it
+			<% else %>
+			Location detected as <%= cookies[:postcode] %>
+		<% end %>
+   </p>
+
   <p>
   	<button type="button" class="btn btn-primary btn-circle btn-xl location">change location and time
     </button>
