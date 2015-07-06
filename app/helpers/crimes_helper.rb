@@ -1,6 +1,11 @@
 module CrimesHelper
 
-  def time_helper(time)
+  def time_helper
+    now = DateTime.now.utc
+    time = now.in_time_zone('Brisbane')
+  end
+
+  def daytime_helper(time)
     return "Morning" if time < 12
     return "Afternoon" if time < 16
     return "Evening" if time < 19
