@@ -1,6 +1,6 @@
 module CrimesHelper
 
-	def time_helper(time)
+  def time_helper(time)
     return "Morning" if time < 12
     return "Afternoon" if time < 16
     return "Evening" if time < 19
@@ -20,15 +20,15 @@ module CrimesHelper
     end
   end
 
-   def risk_rating_helper(risk)
-      case risk
-      when "Red"
-        "danger"
-      when "Amber"
-        "warning"
-      when "Green"
-        "success"
-      end
+  def risk_rating_helper(colour)
+    case colour
+    when "Red"
+      {rating: "danger", sentence: "Be Very Vigilant!"}
+    when "Amber"
+      {rating: "warning", sentence: "Be Cautious!"}
+    when "Green"
+      {rating: "success", sentence: "Low risk, stay safe!"}
     end
+  end
 
 end

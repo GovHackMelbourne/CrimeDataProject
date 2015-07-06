@@ -27,13 +27,18 @@ class CrimeDataController < ApplicationController
     puts "TTTTTTTTTTTTTTTTTTTT"
 
     record = CrimeDatum.where(category: cookies[:path], local_authority: cookies[:location], season: season_helper(month), time: time_helper(hour)).first
-    risk = record.light
+    colour = record.light
 
-    @risk_rating = risk_rating_helper(risk)
+    @risk_colour = risk_rating_helper(colour)[:rating]
+    @risk_sentence = risk_rating_helper(colour)[:sentence]
 
     puts "CCCCCCCCCCCCCCCCC"
-    p @risk_rating
+    p @risk_colour
     puts "CCCCCCCCCCCCCCCCC"
+
+    puts "RRRRRRRRRRRRRRRRR"
+    p @risk_sentence
+    puts "RRRRRRRRRRRRRRRRR"
 
   end
 
