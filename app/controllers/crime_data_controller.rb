@@ -12,39 +12,28 @@ class CrimeDataController < ApplicationController
     hour = time.hour
     month = time.month
 
-    puts "***********"
-    p cookies[:location]
-    puts "***********"
+    @colour = CrimeDatum.where(
+      category: cookies[:path], 
+      local_authority: cookies[:location], 
+      season: season_helper(month), 
+      time: time_helper(hour)
+      ).first.light
 
-    puts "SSSSSSSSSSSSSSSSSSSS"
-    p season_helper(month)
-    p month
-    puts "SSSSSSSSSSSSSSSSSSSS"
-
-    puts "TTTTTTTTTTTTTTTTTTTT"
-    p time_helper(hour)
-    p hour
-    puts "TTTTTTTTTTTTTTTTTTTT"
-
-    record = CrimeDatum.where(category: cookies[:path], local_authority: cookies[:location], season: season_helper(month), time: time_helper(hour)).first
-    colour = record.light
-
-    @risk_colour = risk_rating_helper(colour)[:rating]
-    @risk_sentence = risk_rating_helper(colour)[:sentence]
-
-    puts "CCCCCCCCCCCCCCCCC"
-    p @risk_colour
-    puts "CCCCCCCCCCCCCCCCC"
-
-    puts "RRRRRRRRRRRRRRRRR"
-    p @risk_sentence
-    puts "RRRRRRRRRRRRRRRRR"
+    @risk_rating = risk_rating_helper(@colour)[:rating]
+    @risk_sentence = risk_rating_helper(@colour)[:sentence]
 
   end
 
   def show
-  	
+    @colour = params[:colour]
+    @risk_rating = risk_rating_helper(@colour)[:rating]
+    @risk_sentence = risk_rating_helper(@colour)[:sentence]
 
+    @crime_datum = CrimeDatum.where(
+      category: cookies[:path], 
+      local_authority: cookies[:location], 
+      light: @colour
+      ).first
   end
 
   def data

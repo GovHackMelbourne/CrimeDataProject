@@ -1,11 +1,11 @@
 <div class="background">
   <p>
-    <a href="/crime_data/show">
-      <button type="button" class="btn btn-<%= @risk_colour %> btn-circle btn-xl rating">
+    <%= link_to(crime_datum_path(id: 1, :colour => @colour)) do %>
+      <button type="button" class="btn btn-<%= @risk_rating %> btn-circle btn-xl rating">
         <%= @risk_sentence %><br>
         ...tell me more! 
       </button>
-    </a>
+    <% end %>
   </p>
   <p>
     <%= link_to(quizzes_path) do %>
@@ -19,8 +19,8 @@
     <%= link_to(crime_data_data_path) do %>
       <button type="button" class="btn btn-info btn-circle btn-xl data">
         show me the<br>
-        DATA!</i>
+        DATA!
     </button>
-  <% end %>
-</p>
+    <% end %>
+  </p>
 </div>

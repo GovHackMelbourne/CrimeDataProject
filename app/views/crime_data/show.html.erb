@@ -1,11 +1,10 @@
 <div class="background">
-  <h1 class="safe">
-    You are in a low risk area at the moment!
+  <h1 class="btn btn-<%= @risk_rating %> btn-xl">
+    <%= @risk_sentence %>
   </h1>
   <br>
   <p class="tip">
-    It's unlikely your car gets stolen in Ballarat at the moment.
-    But it's always a good idea to lock it. 
+   <%= @crime_datum.tip1 %>
   </p>
   <br>
   <br>
