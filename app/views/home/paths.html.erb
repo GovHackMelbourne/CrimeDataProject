@@ -1,23 +1,22 @@
 <div class="background">
-	<p>
-	<%= link_to(crime_data_path(:selection => 'Foot')) do %>
-			<button type="button" class="btn btn-warning btn-circle btn-xl standard">
-				<i class="fa fa-user"></i>
-			</button>
-	<% end %>
-	</p>
-	<p>
-		<%= link_to(crime_data_path(:selection => 'Home')) do %>
-			<button type="button" class="btn btn-warning btn-circle btn-xl standard">
-				<i class="fa fa-building"></i>
-		    </button>
-		<% end %>
-	<p>
-		<%= link_to(crime_data_path(:selection => 'Vehicle')) do %>
-			<button type="button" class="btn btn-warning btn-circle btn-xl standard">
-				<i class="fa fa-road"></i>
-		    </button>
-		<% end %>
-	</p>
-</div>
-  
+  <p>
+    <%= link_to(crime_data_path(:selection => 'Foot')) do %>
+      <button type="button" class="btn btn-warning btn-circle btn-xl standard">
+        <i class="fa fa-user"></i>
+      </button>
+    <% end %>
+  </p>
+  <p>
+    <%= link_to(crime_data_path(:selection => 'Home')) do %>
+      <button type="button" class="btn btn-warning btn-circle btn-xl standard">
+        <i class="fa fa-building"></i>
+      </button>
+    <% end %>
+    <p>
+      <%= link_to(crime_data_path(:selection => 'Vehicle')) do %>
+        <button type="button" class="btn btn-warning btn-circle btn-xl standard">
+          <i class="fa fa-road"></i>
+        </button>
+      <% end %>
+    </p>
+  </div>
