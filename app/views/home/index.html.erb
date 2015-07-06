@@ -1,11 +1,11 @@
 <div class="background">
   <%= image_tag('logo.png', class:"logo")%>
-  
-  <% if cookies[:postcode] && !cookies[:postcode].empty? %>
+
+  <% if cookies[:postcode].starts_with?('3') %>
     <%= button_to "START", home_paths_path, method: :get, class: "btn btn-success btn-circle btn-xl start" %>
     Location detected as <%= cookies[:postcode] %>
     <%= button_to "change location & time", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl location" %>
-  <% else %>
+  <% elsif cookies[:postcode] %>
     <%= button_to "START", home_options_path, method: :get, class: "btn btn-primary btn-circle btn-xl start" %>
   <% end %>
 </div>
