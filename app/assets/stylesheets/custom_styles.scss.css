@@ -9,22 +9,9 @@ body {
 h1 {
     font-size: 30px;
 }
-/*green: #5cb85c, yellow: #f0ad4e, blue: #, red: #d9534f*/
 
 .logo {
     width: 180px;
-}
-
-.Green {
-    color: #5CB85C;
-}
-
-.Amber {
-    color: #5cb85c;
-}
-
-.Red {
-    color: #d9534f;
 }
 
 .wrong {

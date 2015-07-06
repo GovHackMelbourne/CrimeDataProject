@@ -3,7 +3,7 @@ class CrimeDataController < ApplicationController
   include CrimesHelper
 
   def index
-    path_cookie_set
+    set_path_cookie
 
     @colour = CrimeDatum.where(
       category: cookies[:path],

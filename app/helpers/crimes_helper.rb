@@ -1,6 +1,6 @@
 module CrimesHelper
 
-  def path_cookie_set
+  def set_path_cookie
     if params[:selection].present?
       cookies[:path] = {
         :value => params[:selection],
@@ -8,7 +8,6 @@ module CrimesHelper
       }
     end
   end
-
 
   def time_helper
     now = DateTime.now.utc
