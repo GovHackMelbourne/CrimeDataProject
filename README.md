@@ -1,4 +1,4 @@
-#Question Crime ![Question Crime](http://questioncrime.herokuapp.com/assets/logo-733b18f528b7c924213d6c875e9291a098397f26d7ba4514fbe4fb84325c02fc.png) 
+#Question Crime ![Question Crime](http://questioncrime.herokuapp.com/assets/logo-733b18f528b7c924213d6c875e9291a098397f26d7ba4514fbe4fb84325c02fc.png =250x250) 
 
 The project aims to create a web app that will promote public awareness of crime data. This is to attempt to change people's behaviour through education and highlighting common misconceptions. 
 
