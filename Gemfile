@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
+
+gem 'ruby', '2.2.1'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -28,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Puma as the app server (only in single thread mode)
 gem 'puma'
+
+# Use 12factor to enable all features
+gem 'rails_12factor'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
