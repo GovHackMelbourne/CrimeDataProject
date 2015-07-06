@@ -38,6 +38,7 @@ class CrimeDataController < ApplicationController
   end
 
   def show
+  	
 
   end
 

@@ -1,18 +1,18 @@
 <div class="background">
-	<h1 class="safe">
-      You are in a low risk area at the moment!
+  <h1 class="safe">
+    You are in a low risk area at the moment!
   </h1>
   <br>
   <p class="tip">
-  	It's unlikely your car gets stolen in Ballarat at the moment.
-  	But it's always a good idea to lock it. 
+    It's unlikely your car gets stolen in Ballarat at the moment.
+    But it's always a good idea to lock it. 
   </p>
   <br>
   <br>
   <p>
-    <a href="/crime_data">   
-    	<button type="button" class="btn btn-warning btn-circle btn-xl small"><i class="fa fa-arrow-right"></i>
-  	</button>
-  </a>
-</p>
+    <%= link_to(crime_data_path) do %>
+      <button type="button" class="btn btn-warning btn-circle btn-xl small"><i class="fa fa-arrow-right"></i>
+      </button>
+    <% end %>
+  </p>
 </div>

@@ -1,23 +1,26 @@
 <div class="background">
-	<p>
-		<a href="/crime_data/show">
-			<button type="button" class="btn btn-<%=@risk_rating%> btn-circle btn-xl rating"> 
-			LOW RISK!<br>...tell me more! 
-			</button></p>
-		</a>
-	<p>
-		<a href="/quizzes">
-			<button type="button" class="btn btn-primary btn-circle btn-xl quiz">
-			take me to the<br>QUIZ!
-    		</button>
-    	</a>
-  	</p>
-	<p>
-		<a href="/crime_data/data">
-			<button type="button" class="btn btn-info btn-circle btn-xl data">
-			show me the<br>DATA!</i>
-		    </button>
-		</a>
+  <p>
+    <a href="/crime_data/show">
+      <button type="button" class="btn btn-<%=@risk_rating%> btn-circle btn-xl rating">
+        LOW RISK!<br>
+        ...tell me more! 
+      </button>
+    </a>
   </p>
+  <p>
+    <%= link_to(quizzes_path) do %>
+      <button type="button" class="btn btn-primary btn-circle btn-xl quiz">
+        take me to the<br>
+        QUIZ!
+        </button>
+    <% end %>
+  </p>
+  <p>
+    <%= link_to(crime_data_data_path) do %>
+      <button type="button" class="btn btn-info btn-circle btn-xl data">
+        show me the<br>
+        DATA!</i>
+    </button>
+  <% end %>
+</p>
 </div>
-
