@@ -3,21 +3,13 @@ class CrimeDataController < ApplicationController
   include CrimesHelper
 
   def index
-    if params[:selection].present?
-      cookies[:path] = {
-        :value => params[:selection],
-        :expires => 1.year.from_now
-      }
-    end
-
-    month = time_helper.month
-    hour = time_helper.hour
+    path_cookie_set
 
     @colour = CrimeDatum.where(
       category: cookies[:path],
       local_authority: cookies[:location],
-      season: season_helper(month),
-      time: daytime_helper(hour)
+      season: season_helper(time_helper.month),
+      time: daytime_helper(time_helper.hour)
     ).first.light
 
     @risk_rating = risk_rating_helper(@colour)[:rating]

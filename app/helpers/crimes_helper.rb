@@ -1,5 +1,15 @@
 module CrimesHelper
 
+  def path_cookie_set
+    if params[:selection].present?
+      cookies[:path] = {
+        :value => params[:selection],
+        :expires => 1.year.from_now
+      }
+    end
+  end
+
+
   def time_helper
     now = DateTime.now.utc
     time = now.in_time_zone('Brisbane')
