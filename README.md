@@ -1,13 +1,13 @@
 #Question Crime 
 
-[<img src="http://questioncrime.herokuapp.com/assets/logo-733b18f528b7c924213d6c875e9291a098397f26d7ba4514fbe4fb84325c02fc.png" title="Visit Question Crime" id="github-question-image"/>](http://questioncrime.herokuapp.com/)
+[<img src="http://questioncrime.herokuapp.com/assets/logo-733b18f528b7c924213d6c875e9291a098397f26d7ba4514fbe4fb84325c02fc.png" title="Visit Question Crime" background-color="#000000"/>](http://questioncrime.herokuapp.com/)
 
-The project aims to create a web app that will promote public awareness of crime data. This is to attempt to change people's behaviour through education and highlighting common misconceptions. 
+The project aims to create a web app t											hat will promote public awareness of crime data. This is to attempt to change people's behaviour through education and highlighting common misconceptions. 
 
 The web app is broken up into two main components:
 
 1. A quiz
-2. A right now function for quick easy access to relevant, summarised crime data pertaining to the users location at the time when accessing the web app. 
+2. A right now function for quick easy access to relevant, summarised crime data pertaining to the users locati																																																																																																																																																																								on at the time when accessing the web app. 
 
 ##CSV data files
 These files are stored into the project root directory and contain the following data:
