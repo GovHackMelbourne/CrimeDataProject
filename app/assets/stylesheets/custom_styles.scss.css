@@ -35,7 +35,7 @@ h1 {
     position: relative;
 }
 
-#github-question-image {
+img #github-question-image {
     width: 400px;
     height: 200px;
     background-color: #404040;
